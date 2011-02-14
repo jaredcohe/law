@@ -1,0 +1,18 @@
+%h1 Title
+= @truth.title
+%br
+%br
+
+%h1 Author
+= @truth.author_name
+%br
+%br
+
+%h1 Body
+= @truth.body
+%br
+%br
+
+= link_to 'Edit', edit_truth_path(@truth)
+= link_to 'Back', truths_path
+= link_to 'New', new_truth_path

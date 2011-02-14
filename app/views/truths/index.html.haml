@@ -1,0 +1,50 @@
+%div.container
+
+  %div.header
+
+    %head
+      %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'}
+      %meta{'name' => 'description', 'content' => 'answer question about whether to attend law school or take lsat, truth about law school and lawyers'}
+      %meta{'name' => 'keywords', 'content' => 'law school, lsat, lawyers, characteristics of laywers, truth about lawyers, considering law school, reasons to attend law school, should go to law school'}
+
+    %title DoNoGoToLawSchool.com
+    %p This is for ideas for the webpage: https://docs.google.com/Doc?docid=0AS1eJswe96AVZGQ2cnQ2azNfNjBrbWpmdHBkMw&hl=en
+    %ul
+    %li make it look like a brief
+
+  %div.top10list
+
+    %h1 People decide to go to law school without being fully-informed. The goal of this website is not to discourage you from attending law school. The goal is to inform you about being a lawyer, so you can make the decision that is best for you. I wish someone had told me these things before I went to law school. Here are the top ten reasons not to go to law school. If you have better reasons to go, then go for it!
+
+    %table
+      - @truths.each do |truth|
+        %tr
+          %td= truth.author_name
+          %td= truth.title
+          %td= truth.body
+          %td= link_to 'Show', truth
+          %td= link_to 'Edit', edit_truth_path(truth)
+          %td= link_to 'Destroy', truth, :confirm => 'Are you sure?', :method => :delete 
+
+    %br
+
+    %p &copy Copyright 2010, DoNotGoToLawSchool.com
+
+  %div.secondary_col
+
+    %p link to comments
+    %br
+
+    %p= link_to "Search or contribute to our database of legal career experiences", "http://www.google.com"
+    %br
+
+    %p If you (1) want to be a lawyer, (2) have a clear understanding of what kind of law you want to practice, (3) have a clear understanding of what the experiences is in that practice, (4) are pretty sure you can get a job practicing that kind of law, and (5) understand what it means to be a lawyer (see left side of page), then GO FOR IT!
+    %br
+
+    %p If you're considering going to law school and you have questions or want to contact me for any reason, use this form.  (Free free to use a fake name.  I may post the question if the answer might be of interest to other people.)
+    %p Link to contact me
+    %p Read about x: link to my blog
+
+    %p Question or Comment:
+
+    = link_to 'New Truth', new_truth_path

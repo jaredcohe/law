@@ -1,0 +1,2 @@
+module TruthsHelper
+end

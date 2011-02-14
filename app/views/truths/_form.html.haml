@@ -1,0 +1,11 @@
+= form_for(@truth) do |f|
+  .fieldset
+    = f.label :author_name
+    = f.text_field :author_name
+  .fieldset
+    = f.label :title
+    = f.text_field :title
+  .fieldset
+    = f.label :truth
+    = f.text_area :body
+  = f.submit
