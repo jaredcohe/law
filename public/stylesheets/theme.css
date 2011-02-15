@@ -93,10 +93,11 @@ table {
 
 #vote {
   padding: 25px 0px 0px 0px;
-  text-align: center; }
+  text-align: left; }
 
 #comments {
-  text-align: center; }
+  text-align: left;
+  padding: 5px 0px 0px 0px; }
 
 #second_column_cell {
   padding: 0px 0px 10px 20px; }
