@@ -7,28 +7,43 @@
       %meta{'name' => 'description', 'content' => 'answer question about whether to attend law school or take lsat, truth about law school and lawyers'}
       %meta{'name' => 'keywords', 'content' => 'law school, lsat, lawyers, characteristics of laywers, truth about lawyers, considering law school, reasons to attend law school, should go to law school'}
 
-    %title DoNoGoToLawSchool.com
-    %p This is for ideas for the webpage: https://docs.google.com/Doc?docid=0AS1eJswe96AVZGQ2cnQ2azNfNjBrbWpmdHBkMw&hl=en
-    %ul
-    %li make it look like a brief
+    %title The Truth About Law School
 
   %div.top10list
 
     %h1 People decide to go to law school without being fully-informed. The goal of this website is not to discourage you from attending law school. The goal is to inform you about being a lawyer, so you can make the decision that is best for you. I wish someone had told me these things before I went to law school. Here are the top ten reasons not to go to law school. If you have better reasons to go, then go for it!
 
-    %table
+    %table.truth_table
+      - counter = 0
       - @truths.each do |truth|
-        %tr
-          %td= truth.author_name
-          %td= truth.title
-          %td= truth.body
-          %td= link_to 'Show', truth
-          %td= link_to 'Edit', edit_truth_path(truth)
-          %td= link_to 'Destroy', truth, :confirm => 'Are you sure?', :method => :delete 
-
-    %br
-
-    %p &copy Copyright 2010, DoNotGoToLawSchool.com
+        - counter = counter + 1
+        - row_id = "counter" + counter.to_s
+        %tr{:id => row_id}
+          %td#first_column_cell
+            %table#first_column_table
+              %tr
+                %td
+              %tr
+                %td.truth_numbers= counter
+              %tr
+                %td.layout2
+              %tr
+                %td#vote.small_links= "Vote Up"
+              %tr
+                %td#comments.small_links= "Comments"
+                
+          %td#second_column_cell
+            %table#second_column_table
+              %tr
+                %td
+              %tr
+                %td.truth_title= truth.title
+              %tr
+                %td#truth_author.small_links
+                  - if !truth.author_name.nil?
+                    = "By " + truth.author_name.to_s
+              %tr
+                %td.truth_body= truth.body
 
   %div.secondary_col
 
@@ -48,3 +63,8 @@
     %p Question or Comment:
 
     = link_to 'New Truth', new_truth_path
+    
+    %p This is for ideas for the webpage: https://docs.google.com/Doc?docid=0AS1eJswe96AVZGQ2cnQ2azNfNjBrbWpmdHBkMw&hl=en
+    %ul
+    %li make it look like a brief
+    

@@ -57,3 +57,46 @@ table {
 .secondary_col {
   float: left;
   width: 300px; }
+
+table {
+  border-bottom: 1px solid #e2e3e5;
+  width: 100%; }
+  table tr td {
+    padding: 5px 2px; }
+  table tr:hover {
+    cursor: pointer;
+    background-color: #ebecef; }
+  table tr #first_column_cell {
+    padding: 0px 0px 0px 0px; }
+
+.truth_title {
+  line-height: 1.5;
+  color: #32a89c;
+  font-size: 110%;
+  font-weight: bold; }
+
+.truth_numbers {
+  background-color: #e2e3e5;
+  border-radius: 30px;
+  color: #32a89c;
+  font-size: 140%;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  padding: 10px 0px 10px 0px; }
+
+.small_links {
+  font-size: 70%; }
+
+#truth_author {
+  font-style: italic; }
+
+#vote {
+  padding: 25px 0px 0px 0px;
+  text-align: center; }
+
+#comments {
+  text-align: center; }
+
+#second_column_cell {
+  padding: 0px 0px 10px 20px; }

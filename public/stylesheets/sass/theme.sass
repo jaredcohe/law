@@ -19,6 +19,7 @@ table, caption, tbody, tfoot, thead, tr, th, td
   font-size: 100%
   vertical-align: baseline
   background: transparent
+//  border: 1px solid #333333
 body
   font-size: 14px
   font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif
@@ -57,3 +58,48 @@ table
 .secondary_col
   float: left
   width: 300px
+
+table
+  border-bottom: 1px solid $l_gray1
+  width: 100%
+  tr
+    td
+      padding: 5px 2px
+    &:hover
+      cursor: pointer
+      background-color: $l_gray2
+    #first_column_cell
+      padding: 0px 0px 0px 0px
+
+.truth_title
+  line-height: 1.5
+  color: $l_green
+  font-size: 110%
+  font-weight: bold
+
+.truth_numbers
+  background-color: $l_gray1
+  border-radius: 30px
+  color: $l_green
+  font-size: 140%
+  font-weight: bold
+  line-height: 30px
+  text-align: center
+  padding: 10px 0px 10px 0px
+
+.small_links
+  font-size: 70%
+
+
+#truth_author
+  font-style: italic
+
+#vote
+  padding: 25px 0px 0px 0px
+  text-align: center
+
+#comments
+  text-align: center
+
+#second_column_cell
+  padding: 0px 0px 10px 20px
