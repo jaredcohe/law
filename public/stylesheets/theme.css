@@ -101,3 +101,11 @@ table {
 
 #second_column_cell {
   padding: 0px 0px 10px 20px; }
+
+h1 {
+  font-size: 125%;
+  font-weight: normal;
+  line-height: 1.5; }
+
+.fieldset {
+  line-height: 1.5; }

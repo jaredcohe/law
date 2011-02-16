@@ -5,6 +5,7 @@ class TruthsController < ApplicationController
   # GET /truths.xml
   def index
     @truths = Truth.all
+    @truth = Truth.new
   end
 
   # GET /truths/1
