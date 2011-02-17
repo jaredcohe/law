@@ -2,8 +2,11 @@ Law::Application.routes.draw do
   resources :truths do
     resources :comments
     resources :authors
-    resources :votes
+    member do
+      get 'add_vote'
+    end
   end
+
   
   root :to => "truths#index"
 

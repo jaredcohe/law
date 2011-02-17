@@ -7,52 +7,44 @@
 
   %title The Truth About Law School
 
-%div.container
+  %div.banner
   
-  %div.header
-    
-    %h1 hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared hi jared jared
+    %b The Truth About Law School
 
-%div.container
+  %div.left_col
 
-  %div.top10list
+    - counter = 0
 
-    %table.truth_table
-      - counter = 0
-      - @truths.each do |truth|
-        - counter = counter + 1
-        - row_id = "counter" + counter.to_s
-        %tr{:id => row_id}
-          %td#first_column_cell
-            %table#first_column_table
-              %tr
-                %td
-              %tr
-                %td.truth_numbers= counter
-              %tr
-                %td.layout2
-              %tr
-                %td#vote.small_links= "Vote Up"
-              %tr
-                %td#comments.small_links= "Comments"
-                
-          %td#second_column_cell
-            %table#second_column_table
-              %tr
-                %td
-              %tr
-                %td.truth_title= truth.title
-              %tr
-                %td#truth_author.small_links
-                  - if !truth.author_name.nil?
-                    = "By " + truth.author_name.to_s
-              %tr
-                %td.truth_body= truth.body
+    - @truths.each do |truth|
+      - counter = counter + 1
+      - row_id = "counter" + counter.to_s
+
+      %article.each_row{:id => row_id}
+      
+        %div.details
+        
+          %div.rankings= counter
+
+          %div.votes= link_to "Vote Up " + truth.votes.to_s, add_vote_truth_path(truth)
+          %div.comments= "Comments"
+
+        %div.truth_section
+        
+          %div.truth_title= truth.title
+
+          %div.truth_author.small_links
+            - if !truth.author_name.nil?
+              = "By " + truth.author_name.to_s
+            - else
+              = "By Anonymous"
+          
+          %div.truth_body= truth.body
     %br
+
     = link_to "About", "/about"
 
-  %div.secondary_col
+  %div.right_col
 
-    %h1 Add Your Truth About Law School
+    %div#form_truth_header Add Your Truth About Law School
 
     = render 'form'

@@ -45,67 +45,126 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  text-decoration: none; }
+
+a:visited {
+  color: #32a89c; }
+
+a:hover {
+  color: white; }
+
 .container {
   margin: 20px auto;
   width: 80%; }
 
-.top10list {
-  float: left;
-  margin-right: 50px;
-  width: 50%; }
-
-.secondary_col {
-  float: left;
-  width: 300px; }
-
-table {
-  border-bottom: 1px solid #e2e3e5;
+.banner {
+  background-color: #32a89c;
+  border: gray solid 4px;
+  color: white;
+  height: 30px;
+  font-size: 200%;
+  margin: 0px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
   width: 100%; }
-  table tr td {
-    padding: 5px 2px; }
-  table tr:hover {
+
+.left_col {
+  float: left;
+  margin-right: 10px;
+  width: 60%; }
+
+.each_row {
+  float: left;
+  padding: 0px 0px 10px 0px;
+  width: 100%; }
+  .each_row:hover {
     cursor: pointer;
     background-color: #ebecef; }
-  table tr #first_column_cell {
-    padding: 0px 0px 0px 0px; }
 
-.truth_title {
-  line-height: 1.5;
-  color: #32a89c;
-  font-size: 110%;
-  font-weight: bold; }
+.details {
+  float: left;
+  margin: 2px 15px 2px 2px;
+  width: 60px; }
 
-.truth_numbers {
+.rankings {
   background-color: #e2e3e5;
   border-radius: 30px;
   color: #32a89c;
   font-size: 140%;
   font-weight: bold;
-  line-height: 30px;
+  height: 26px;
   text-align: center;
-  padding: 10px 0px 10px 0px; }
+  padding: 14px 0px; }
+
+.votes {
+  font-size: 70%;
+  padding: 25px 0px 4px 0px;
+  text-align: left; }
+
+.comments {
+  font-size: 70%;
+  padding: 2px 0px 4px 0px;
+  text-align: left; }
+
+.truth_section {
+  float: left;
+  margin: 2px auto;
+  width: 80%; }
+
+.truth_title {
+  float: left;
+  line-height: 1.5;
+  color: #32a89c;
+  font-size: 110%;
+  font-weight: bold;
+  padding: 0px 0px 5px 0px; }
+
+.truth_author {
+  float: left;
+  font-style: italic;
+  padding: 0px 0px 5px 0px;
+  width: 100%; }
+
+.truth_body {
+  float: left;
+  font-size: 110%;
+  width: 100%; }
+
+.right_col {
+  float: left;
+  width: 30%;
+  padding: 0px 0px 0px 20px; }
+  .right_col #form_truth_header {
+    font-size: 120%;
+    margin: 0px 0px 10px 0px; }
+  .right_col #form_author_name {
+    font-size: 80%;
+    margin: 0px 0px 2px 0px; }
+  .right_col #form_truth_title {
+    font-size: 80%;
+    margin: 0px 0px 2px 0px; }
+  .right_col #form_truth_body {
+    font-size: 80%;
+    margin: 0px 0px 2px 0px; }
+  .right_col #form_button {
+    font-size: 80%;
+    margin: 0px 0px 2px 0px; }
+
+.field_labels {
+  width: 100%; }
+
+table {
+  border-bottom: 1px solid #e2e3e5;
+  width: 100%; }
+  table tr td {
+    padding: 2px 2px 2px 2px; }
+  table tr #first_column_cell {
+    padding: 0px 0px 0px 0px; }
+
+.fieldset {
+  padding: 2px 2px 2px 2px;
+  width: 320px; }
 
 .small_links {
   font-size: 70%; }
-
-#truth_author {
-  font-style: italic; }
-
-#vote {
-  padding: 25px 0px 0px 0px;
-  text-align: left; }
-
-#comments {
-  text-align: left;
-  padding: 5px 0px 0px 0px; }
-
-#second_column_cell {
-  padding: 0px 0px 10px 20px; }
-
-h1 {
-  font-size: 125%;
-  font-weight: normal;
-  line-height: 1.5; }
-
-.fieldset {
-  line-height: 1.5; }

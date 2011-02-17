@@ -1,14 +1,23 @@
 = form_for(@truth) do |f|
-  .fieldset
-    = f.label :author_name, "Your Name (optional):"
-    %br
+  #form_author_name
+    .field_labels
+      = f.label :author_name, "Your Name (optional):"
     = f.text_field :author_name
-  .fieldset
-    = f.label :title, "Title of Truth:"
-    %br
+  #form_truth_title
+    .field_labels
+      = f.label :title, "Title of Truth:"
     = f.text_field :title
-  .fieldset
-    = f.label :truth, "The Truth About Law School:"
-    %br
-    = f.text_area :body, :size => "50x10"
-  = f.submit
+  #form_truth_body
+    .field_labels
+      = f.label :truth, "Tell Potential Lawyers A Truth About Law School:"
+    = f.text_area :body, :size => "35x10"
+  #form_button.fieldset
+    = f.submit
+  
+  
+  
+  
+  
+  
+  
+  

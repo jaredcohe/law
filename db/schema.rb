@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214172435) do
+ActiveRecord::Schema.define(:version => 20110216215503) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -34,12 +34,7 @@ ActiveRecord::Schema.define(:version => 20110214172435) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "author_name"
-  end
-
-  create_table "votes", :force => true do |t|
-    t.integer  "truth_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "votes"
   end
 
 end

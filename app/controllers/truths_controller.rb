@@ -1,15 +1,11 @@
 class TruthsController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update, :destroy]
 
-  # GET /truths
-  # GET /truths.xml
   def index
-    @truths = Truth.all
+    @truths = Truth.all :order => 'votes DESC'
     @truth = Truth.new
   end
 
-  # GET /truths/1
-  # GET /truths/1.xml
   def show
     @truth = Truth.find(params[:id])
   end
@@ -18,13 +14,10 @@ class TruthsController < ApplicationController
     @truth = Truth.new
   end
 
-  # GET /truths/1/edit
   def edit
     @truth = Truth.find(params[:id])
   end
 
-  # POST /truths
-  # POST /truths.xml
   def create
     @truth = Truth.new(params[:truth])
 
@@ -35,10 +28,13 @@ class TruthsController < ApplicationController
     end
   end
 
-  # PUT /truths/1
-  # PUT /truths/1.xml
   def update
+    @truths = Truth.all :order => 'votes DESC'
     @truth = Truth.find(params[:id])
+
+# add redirect to the one voted for
+#    ranking = 
+#maybe make this AJAX
 
     if @truth.update_attributes(params[:truth])
       redirect_to(@truth, :notice => 'Truth was successfully updated.')
@@ -47,8 +43,18 @@ class TruthsController < ApplicationController
     end
   end
 
-  # DELETE /truths/1
-  # DELETE /truths/1.xml
+  def add_vote
+    @truth = Truth.find(params[:id])
+    @truth.votes = @truth.votes.to_i + 1
+    
+
+    if @truth.save
+      redirect_to(:root, :notice => "Thank you for your vote.")
+    else
+      redirect_to(:back, :notice => "Sorry, we could not count your vote. We'll look into it.")
+    end
+  end
+
   def destroy
     @truth = Truth.find(params[:id])
 

@@ -46,69 +46,124 @@ table
   border-spacing: 0
 
 //**********MAIN CONTENT CONTAINER STYLES**********//
+a
+  text-decoration: none
+
+a:visited
+  color: $l_green
+
+a:hover
+  color: #FFFFFF
+  
 .container
   margin: 20px auto
   width: 80%
 
-.top10list
-  float: left
-  margin-right: 50px
-  width: 50%
+.banner
+  background-color: $l_green
+  border: gray solid 4px
+  color: #FFFFFF
+  float:left
+  height: 30px
+  font-size: 200%
+  margin: 0px 0px 20px 0px
+  padding: 20px 0px 20px 0px
+  text-align: center
+  width: 100%
 
-.secondary_col
+.left_col
   float: left
-  width: 300px
+  margin-right: 10px
+  width: 60%
+
+.each_row
+  float: left
+  padding: 0px 0px 10px 0px
+  width: 100%
+  &:hover
+    cursor: pointer
+    background-color: $l_gray2
+
+.details
+  float: left
+  margin: 2px 15px 2px 2px
+  width: 60px
+
+.rankings
+  background-color: $l_gray1
+  border-radius: 30px
+  color: $l_green
+  font-size: 140%
+  font-weight: bold
+  height: 26px
+  text-align: center
+  padding: 14px 0px
+.votes
+  font-size: 70%
+  padding: 25px 0px 4px 0px
+  text-align: left
+.comments
+  font-size: 70%
+  padding: 2px 0px 4px 0px
+  text-align: left
+
+.truth_section
+  float: left
+  margin: 2px auto
+  width: 80%
+.truth_title
+  float: left
+  line-height: 1.5
+  color: $l_green
+  font-size: 110%
+  font-weight: bold
+  padding: 0px 0px 5px 0px
+.truth_author
+  float: left
+  font-style: italic
+  padding: 0px 0px 5px 0px
+  width: 100%
+.truth_body
+  float: left
+  font-size: 110%
+  width: 100%
+
+.right_col
+  float: left
+  width: 30%
+  padding: 0px 0px 0px 20px
+  #form_truth_header
+    font-size: 120%
+    margin: 0px 0px 10px 0px
+  #form_author_name
+    font-size: 80%
+    margin: 0px 0px 2px 0px
+  #form_truth_title
+    font-size: 80%
+    margin: 0px 0px 2px 0px
+  #form_truth_body
+    font-size: 80%
+    margin: 0px 0px 2px 0px
+  #form_button
+    font-size: 80%
+    margin: 0px 0px 2px 0px
+
+.field_labels
+  width: 100%
+      
 
 table
   border-bottom: 1px solid $l_gray1
   width: 100%
   tr
     td
-      padding: 5px 2px
-    &:hover
-      cursor: pointer
-      background-color: $l_gray2
+      padding: 2px 2px 2px 2px
     #first_column_cell
       padding: 0px 0px 0px 0px
 
-.truth_title
-  line-height: 1.5
-  color: $l_green
-  font-size: 110%
-  font-weight: bold
-
-.truth_numbers
-  background-color: $l_gray1
-  border-radius: 30px
-  color: $l_green
-  font-size: 140%
-  font-weight: bold
-  line-height: 30px
-  text-align: center
-  padding: 10px 0px 10px 0px
+.fieldset
+  padding: 2px 2px 2px 2px
+  width: 320px
 
 .small_links
   font-size: 70%
-
-#truth_author
-  font-style: italic
-
-#vote
-  padding: 25px 0px 0px 0px
-  text-align: left
-
-#comments
-  text-align: left
-  padding: 5px 0px 0px 0px
-  
-#second_column_cell
-  padding: 0px 0px 10px 20px
-
-h1
-  font-size: 125%
-  font-weight: normal
-  line-height: 1.5
-
-//******** form partial *********//
-.fieldset
-  line-height: 1.5
