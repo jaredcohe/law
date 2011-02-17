@@ -20,9 +20,10 @@ class TruthsController < ApplicationController
 
   def create
     @truth = Truth.new(params[:truth])
+    @truth.votes = 0
 
     if @truth.save
-      redirect_to(@truth, :notice => 'Truth was successfully created.')
+      redirect_to(:root, :notice => 'Truth was successfully created.')
     else
       render :action => "new"
     end
@@ -59,7 +60,7 @@ class TruthsController < ApplicationController
     @truth = Truth.find(params[:id])
 
     if @truth.destroy
-      redirect_to(truths_url)
+      redirect_to :root, :notice => "Delete DONE"
     else
       redirect_to :back, :notice => "Delete failed"
     end

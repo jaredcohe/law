@@ -1,0 +1,11 @@
+= p params
+
+%h1 Editing truth
+
+= render 'form'
+
+= button_to 'Delete Truth', truth_path(:id => params[:id]), :confirm => "Are you sure you want to delete #{@event}?", :method => :delete
+
+= link_to 'Show', @truth |
+= link_to 'Back', truths_path
+
