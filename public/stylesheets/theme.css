@@ -52,7 +52,7 @@ a:visited {
   color: #32a89c; }
 
 a:hover {
-  color: white; }
+  color: red; }
 
 .container {
   margin: 20px auto;
