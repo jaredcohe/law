@@ -66,10 +66,11 @@ a:hover {
   background-color: white;
   border-bottom: 1px solid #636363;
   color: #636363;
+  font-weight: bold;
   height: 30px;
-  font-size: 200%;
+  font-size: 400%;
   margin: 0px 0px 14 px 0px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 50px 0px;
   text-align: center;
   width: 94%; }
 
