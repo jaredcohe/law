@@ -58,21 +58,33 @@ a:hover {
   margin: 20px auto;
   width: 80%; }
 
+#navbar_list {
+  margin: 20px auto;
+  width: 80%; }
+
 .banner {
-  background-color: #32a89c;
-  border: gray solid 4px;
-  color: white;
+  background-color: white;
+  border-bottom: 1px solid #636363;
+  color: #636363;
   height: 30px;
   font-size: 200%;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 14 px 0px;
   padding: 20px 0px 20px 0px;
   text-align: center;
-  width: 100%; }
+  width: 94%; }
+
+.introduction {
+  border-bottom: 1px solid #636363;
+  float: left;
+  font-size: 120%;
+  margin: 0px 0px 15px 0px;
+  padding: 0px 0px 15px 0px;
+  width: 94%; }
 
 .left_col {
   float: left;
-  margin-right: 10px;
-  width: 60%; }
+  margin-right: 60px;
+  width: 50%; }
 
 .each_row {
   float: left;
@@ -131,25 +143,29 @@ a:hover {
   font-size: 110%;
   width: 100%; }
 
+.col_title {
+  color: #32a89c;
+  font-size: 180%;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+  text-align: center; }
+
 .right_col {
   float: left;
   width: 30%;
-  padding: 0px 0px 0px 20px; }
-  .right_col #form_truth_header {
-    font-size: 120%;
-    margin: 0px 0px 10px 0px; }
+  padding: 0px 0px 4px 20px; }
   .right_col #form_author_name {
     font-size: 80%;
-    margin: 0px 0px 2px 0px; }
+    margin: 0px 0px 4px 0px; }
   .right_col #form_truth_title {
     font-size: 80%;
-    margin: 0px 0px 2px 0px; }
+    margin: 0px 0px 4px 0px; }
   .right_col #form_truth_body {
     font-size: 80%;
-    margin: 0px 0px 2px 0px; }
+    margin: 0px 0px 4px 0px; }
   .right_col #form_button {
     font-size: 80%;
-    margin: 0px 0px 2px 0px; }
+    margin: 0px 0px 4px 0px; }
 
 .field_labels {
   width: 100%; }
