@@ -22,10 +22,12 @@ class TruthsController < ApplicationController
     @truth = Truth.new(params[:truth])
     @truth.votes = 0
 
+    @verify = verify_recaptcha
+
     if verify_recaptcha && @truth.save
       redirect_to(:root, :notice => 'Truth was successfully created.')
     else
-      redirect_to(:back, :notice => 'Please try again, test for being human failed.' + verify_recaptcha(:model => @truth)
+      redirect_to(:back, :notice => 'Please try again, test for being human failed.' + verify_recaptcha.to_s)
     end
   end
 
