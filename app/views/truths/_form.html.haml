@@ -11,6 +11,7 @@
     .field_labels
       = f.label :truth, "Tell the Truth:"
     = f.text_area :body, :size => "35x10"
+  = recaptcha_tags
   #form_button.fieldset
     = f.submit
   
