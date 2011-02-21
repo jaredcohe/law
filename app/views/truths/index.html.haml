@@ -1,3 +1,5 @@
+= jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 5','Truth must have title with at least 5 characters.'))
+
 %div.container
 
   %head
@@ -54,3 +56,5 @@
       Contribute A Truth About Law School
 
     = render 'form'
+    
+    = recaptcha_tags

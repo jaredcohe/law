@@ -1,6 +1,7 @@
 class Truth < ActiveRecord::Base
   validates :body,  :presence => true,
                     :length => { :minimum => 10 }
+  validates :title,  :presence => true
 
   has_many  :comments, :dependent => :destroy
   has_one   :author, :dependent => :destroy

@@ -47,7 +47,7 @@ class TruthsController < ApplicationController
   def add_vote
     @truth = Truth.find(params[:id])
     @truth.votes = @truth.votes.to_i + 1
-    
+
 
     if @truth.save
       redirect_to(:root, :notice => "Thank you for your vote.")

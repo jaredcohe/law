@@ -5,6 +5,8 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails", "0.3.4"
 gem 'mysql2'
 
+gem 'recaptcha', :require => 'recaptcha/rails'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

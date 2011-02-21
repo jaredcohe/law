@@ -5,6 +5,14 @@ This is for ideas for the webpage: https://docs.google.com/Doc?docid=0AS1eJswe96
 %p= link_to "Search or contribute to our database of legal career experiences", "http://www.google.com"
 %br
 
+recaptcha
+Public Key:	6LdcxMESAAAAACqdS9rtWt2QLVcWsgEgGgbvaetk
+Use this in the JavaScript code that is served to your users
+
+Private Key:	6LdcxMESAAAAAMbbF2A6ua1lLOemUV-gI7Bq0qTI
+Use this when communicating between your server and our server. Be sure to keep it a secret.
+
+https://www.google.com/recaptcha/admin/site?siteid=314688604
 
 
 == Welcome to Rails
