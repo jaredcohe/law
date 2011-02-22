@@ -22,14 +22,20 @@ class TruthsController < ApplicationController
     @truth = Truth.new(params[:truth])
     @truth.votes = 0
 
-    if verify_recaptcha && @truth.save
+    recaptcha = verify_recaptcha
+
+    if recaptcha && @truth.save
       redirect_to :root, :notice => 'Truth was successfully created.'
     elsif @truth.title.nil? || @truth.title == ""
       redirect_to :back, :notice => 'Truth must have title.'
     elsif @truth.body.nil? || @truth.body == ""
       redirect_to :back, :notice => 'Truth cannot be blank.'
+    elsif !recaptcha
+      @title_persist = @truth.title
+      @body_persist = @truth.body
+      redirect_to :back, :notice => 'Please try again, human verification failed.'
     else
-      redirect_to :back, :notice => 'Please try again, test for being human failed.'
+      redirect_to :back, :notice => 'Please try again.'
     end
   end
 
