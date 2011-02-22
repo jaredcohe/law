@@ -1,5 +1,7 @@
 == IDEAS
 
+user_name == 'kagan' && password == 'l_wetsuit'
+      
 This is for ideas for the webpage: https://docs.google.com/Doc?docid=0AS1eJswe96AVZGQ2cnQ2azNfNjBrbWpmdHBkMw&hl=en
 
 %p= link_to "Search or contribute to our database of legal career experiences", "http://www.google.com"
