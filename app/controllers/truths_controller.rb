@@ -23,9 +23,13 @@ class TruthsController < ApplicationController
     @truth.votes = 0
 
     if verify_recaptcha && @truth.save
-      redirect_to(:root, :notice => 'Truth was successfully created.')
+      redirect_to :root, :notice => 'Truth was successfully created.'
+    elsif @truth.title.nil? || @truth.title == ""
+      redirect_to :back, :notice => 'Truth must have title.'
+    elsif @truth.body.nil? || @truth.body == ""
+      redirect_to :back, :notice => 'Truth cannot be blank.'
     else
-      redirect_to(:back, :notice => 'Please try again, test for being human failed.' + verify_recaptcha.to_s)
+      redirect_to :back, :notice => 'Please try again, test for being human failed.'
     end
   end
 
@@ -47,7 +51,6 @@ class TruthsController < ApplicationController
   def add_vote
     @truth = Truth.find(params[:id])
     @truth.votes = @truth.votes.to_i + 1
-
 
     if @truth.save
       redirect_to(:root, :notice => "Thank you for your vote.")

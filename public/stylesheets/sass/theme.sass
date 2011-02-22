@@ -164,9 +164,12 @@ a:hover
   #form_button
     font-size: 86%
     margin: 0px 0px 4px 0px
+  #recaptcha_title
+    font-size: 86%
+    margin: 0px 0px 8px 0px  
   #recaptcha_box
     font-size: 86%
-    margin: 0px 0px 8px 0px
+    margin: 0px 0px 0px 0px
 
 .field_labels
   width: 100%
@@ -192,7 +195,18 @@ table
   float: left
   font-size: 150%
   padding: 2px 2px 12px 2px
+  width: 100%
 
 .ErrorField
   background-color: rgba(255,0,0,.1)
   border: 3px solid red
+
+.notice
+  border-bottom-left-radius: 5px
+  border-top-left-radius: 5px
+  background: $l_yellow
+  padding: 10px 5px
+  position: fixed
+  right: 0
+  top: 25%
+  z-index: 100
