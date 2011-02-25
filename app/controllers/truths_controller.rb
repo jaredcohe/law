@@ -24,6 +24,10 @@ class TruthsController < ApplicationController
 
     recaptcha = verify_recaptcha
 
+    if @truth.author_name.nil? || @truth.author_name == ""
+      @truth.author_name = "Anonymous"
+    end
+
     if recaptcha && @truth.save
       redirect_to :root, :notice => 'Truth was successfully created.'
     elsif @truth.title.nil? || @truth.title == ""
