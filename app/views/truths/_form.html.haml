@@ -1,27 +1,12 @@
-= form_for(@truth) do |f|
-  #form_author_name
-    .field_labels
-      = f.label :author_name, "Your Name (optional):"
-    = f.text_field :author_name, :default => "Anonymous"
-  #form_truth_title
-    .field_labels
-      = f.label :title, "Title of Truth:"
-    = f.text_field :title
-  #form_truth_body
-    .field_labels
-      = f.label :truth, "Tell the Truth:"
-    = f.text_area :body, :size => "35x10"
-  #recaptcha_title
-    Prove you're a human and not spam please:
-  #recaptcha_box
-    = recaptcha_tags
-  #form_button.fieldset
-    = f.submit
-  
-  
-  
-  
-  
-  
-  
-  
+#form_author_name
+  .field_labels
+    = f.label :author_name, "Your Name (optional):"
+  = f.text_field :author_name, :default => "Anonymous"
+#form_truth_title
+  .field_labels
+    = f.label :title, "Title of Truth:"
+  = f.text_field :title
+#form_truth_body
+  .field_labels
+    = f.label :truth, "Tell the Truth:"
+  = f.text_area :body, :size => "35x10"

@@ -53,7 +53,14 @@
     %div.col_title
       Contribute A Truth About Law School
 
-    = render 'form'
+    = form_for(@truth) do |f|
+      = render 'form', {:f => f}
+      #recaptcha_title
+        Prove you're a human and not spam please:
+      #recaptcha_box
+        = recaptcha_tags
+      #form_button.fieldset
+        = f.submit
 
   %div.notice_column
     = notice
