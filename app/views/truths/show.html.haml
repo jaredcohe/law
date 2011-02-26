@@ -1,5 +1,3 @@
-
-
 %h1 Title
 = @truth.title
 %br
@@ -15,6 +13,5 @@
 %br
 %br
 
-= link_to 'Edit', edit_truth_path(@truth)
-= link_to 'Back', truths_path
-= link_to 'New', new_truth_path
+#disqus_thread
+  = disqus_init_js
