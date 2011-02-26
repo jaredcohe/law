@@ -2,10 +2,11 @@ module TruthsHelper
   def disqus_init_js
     js =<<EOS
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'thetruthaboutlawschool'; // required: replace example with your forum shortname
+      var disqus_shortname = 'thetruthaboutlawschool';
+      var disqus_developer = 1; // developer mode is on
 
       // The following are highly recommended additional parameters. Remove the slashes in front to use.
-      var disqus_identifier = #{@truth.id};
+      var disqus_identifier = '#{@truth.id}';
       var disqus_url = 'http://thetruthaboutlawschool.com/permalink-to-page.html';
 
       /* * * DON'T EDIT BELOW THIS LINE * * */

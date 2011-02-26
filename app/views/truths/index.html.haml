@@ -1,23 +1,18 @@
 = jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 3','Title must have at least 3 characters.') + validate_js('truth_body','VAL && VAL.length < 10','Truth must have at least 10 characters.') + validate_js('truth_title','!VAL','Truth must have a title.') + validate_js('truth_body','!VAL','Truth cannot be blank.'))
 
-%div.container
+.container
 
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=utf-8'}
     %meta{'name' => 'description', 'content' => 'answer question about whether to attend law school or take lsat, truth about law school and lawyers'}
     %meta{'name' => 'keywords', 'content' => 'law school, lsat, lawyers, characteristics of laywers, truth about lawyers, considering law school, reasons to attend law school, should go to law school'}
 
-  %title The Truth About Law School
+    .introduction People often apply to law school without fully understanding what it means to attend law school or to be a lawyer and without fully knowing themselves and what they want. This website can't help with the personal issues, but it can, with your contribution, help educate potential law students about the decision to attend law school. This website is intended to be a source of information to help those potential law student understand as much as possible about law school and being a lawyer, so they can make an educated decision about whether to apply and what to do after. Please help by contributing truths or voting up the most useful ones.
 
-  %div#banner
-    The Truth About Law School&nbsp;<span class="beta">BETA!</span>
 
-  %div.introduction
-    People often apply to law school without fully understanding what it means to attend law school or to be a lawyer and without fully knowing themselves and what they want. This website can't help with the personal issues, but it can, with your contribution, help educate potential law students about the decision to attend law school. This website is intended to be a source of information to help those potential law student understand as much as possible about law school and being a lawyer, so they can make an educated decision about whether to apply and what to do after. Please help by contributing truths or voting up the most useful ones.
+  .left_col
 
-  %div.left_col
-
-    %div.col_title
+    .col_title
       Truths About Law School
 
     - counter = 0
@@ -28,29 +23,29 @@
 
       %article.each_row{:id => row_id}
       
-        %div.details
+        .details
         
-          %div.rankings= counter
+          .rankings= counter
 
-          %div.votes= link_to "Vote Up " + truth.votes.to_s, add_vote_truth_path(truth)
-          %div.comments= "Comments"
+          .votes= link_to "Vote Up " + truth.votes.to_s, add_vote_truth_path(truth)
+          .comments= "Comments"
 
-        %div.truth_section
+        .truth_section
         
-          %div.truth_title= truth.title
+          .truth_title= truth.title
 
-          %div.truth_author.small_links
+          .truth_author.small_links
             - if !truth.author_name.nil?
               = "By " + truth.author_name.to_s
             - else
               = "By Anonymous"
           
-          %div.truth_body= truth.body
+          .truth_body= truth.body
     %br
 
-  %div.right_col
+  .right_col
   
-    %div.col_title
+    .col_title
       Contribute A Truth About Law School
 
     = form_for(@truth) do |f|
@@ -62,5 +57,5 @@
       #form_button.fieldset
         = f.submit
 
-  %div.notice_column
+  .notice_column
     = notice

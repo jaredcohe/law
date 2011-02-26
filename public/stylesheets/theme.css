@@ -225,3 +225,8 @@ table {
   margin-top: 50px;
   padding: 320px 0px 0px 0px;
   width: 10%; }
+
+.truth_section_comments {
+  float: left;
+  margin: 6px 0px 15px 0px;
+  width: 80%; }
