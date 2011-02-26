@@ -27,8 +27,8 @@
         
           .rankings= counter
 
-          .votes= link_to "Vote Up " + truth.votes.to_s, add_vote_truth_path(truth)
-          .comments= "Comments"
+          .votes= link_to "- Vote (" + truth.votes.to_s + ")", add_vote_truth_path(truth)
+          .comments= link_to "- Comments", truth_path(truth)
 
         .truth_section
         
