@@ -86,7 +86,7 @@ a:hover {
   padding: 0px 0px 15px 0px;
   width: 94%; }
 
-.left_col {
+#left_col {
   float: left;
   margin-right: 60px;
   width: 50%; }
@@ -155,28 +155,37 @@ a:hover {
   margin: 0px 0px 10px 0px;
   text-align: center; }
 
-.right_col {
-  float: left;
+#right_col {
+  position: absolute;
   width: 30%;
-  padding: 0px 0px 4px 20px; }
-  .right_col #form_author_name {
+  padding: 0px 0px 4px 20px;
+  top: 350.4;
+  left: 523; }
+  #right_col #form_author_name {
     font-size: 86%;
     margin: 0px 0px 4px 0px; }
-  .right_col #form_truth_title {
+  #right_col #form_truth_title {
     font-size: 86%;
     margin: 0px 0px 4px 0px; }
-  .right_col #form_truth_body {
+  #right_col #form_truth_body {
     font-size: 86%;
     margin: 0px 0px 4px 0px; }
-  .right_col #form_button {
+  #right_col #form_button {
     font-size: 86%;
     margin: 0px 0px 4px 0px; }
-  .right_col #recaptcha_title {
+  #right_col #recaptcha_title {
     font-size: 86%;
     margin: 0px 0px 8px 0px; }
-  .right_col #recaptcha_box {
+  #right_col #recaptcha_box {
     font-size: 86%;
     margin: 0px 0px 0px 0px; }
+
+#right_col.fixed {
+  position: fixed;
+  width: 30%;
+  padding: 0px 0px 4px 20px;
+  top: 6;
+  left: 523; }
 
 .field_labels {
   width: 100%; }
@@ -236,6 +245,14 @@ table {
 
 #addthis_bar {
   position: absolute;
-  right: 2px;
-  top: 18px;
-  width: 120px; }
+  right: -150px;
+  top: 6px;
+  width: 500px; }
+
+.copyright {
+  float: left;
+  font-size: 70%;
+  margin: 10px auto;
+  padding-left: 120px;
+  padding-top: 40px;
+  width: 80%; }

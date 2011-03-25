@@ -1,4 +1,4 @@
-= jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 3','Title must have at least 3 characters.') + validate_js('truth_body','VAL && VAL.length < 10','Truth must have at least 10 characters.') + validate_js('truth_title','!VAL','Truth must have a title.') + validate_js('truth_body','!VAL','Truth cannot be blank.'))
+= jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 3','Title must have at least 3 characters.') + validate_js('truth_body','VAL && VAL.length < 10','Truth must have at least 10 characters.') + validate_js('truth_title','!VAL','Truth must have a title.') + validate_js('truth_body','!VAL','Truth cannot be blank.') + fixed_floating_element)
 
 .container
 
@@ -10,7 +10,7 @@
   .introduction People often apply to law school without fully understanding what it means to attend law school or to be a lawyer and without fully knowing themselves and what they want. This website can't help with the personal issues, but it can, with your contribution, help educate potential law students about the decision to attend law school. This website is intended to be a source of information to help those potential law students understand as much as possible about law school and being a lawyer, so they can make an educated decision about whether to apply and what to do after. Please help by contributing truths or voting up the most useful ones.
 
 
-  .left_col
+  #left_col
 
     .col_title
       Truths About Law School
@@ -41,9 +41,8 @@
               = "By Anonymous"
           
           .truth_body= truth.body
-    %br
 
-  .right_col
+  #right_col
   
     .col_title
       Contribute A Truth About Law School
@@ -57,5 +56,5 @@
       #form_button.fieldset
         = f.submit
 
-  .notice_column
-    = notice
+.copyright
+  &copy 2011 TheTruthAboutLawSchool.com

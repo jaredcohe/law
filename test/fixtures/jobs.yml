@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  author: MyString
+  job_title: MyString
+  job_description: MyText
+  weekly_hours: 
+  annual_compensation: 1
+
+two:
+  author: MyString
+  job_title: MyString
+  job_description: MyText
+  weekly_hours: 
+  annual_compensation: 1

@@ -1,5 +1,29 @@
 module ApplicationHelper
 
+  def fixed_floating_element
+    js =<<EOS
+      $(document).ready(function () {
+
+        var top = $('#right_col').offset().top;
+        console.log(top)
+
+        $(window).scroll(function () {
+          // what is y position of scrolling
+          var y = $(window).scrollTop();
+
+          // is it below the form
+          if (y >= top) {
+            // if so add fixed class
+            $('#right_col').addClass('fixed')
+          } else {
+          // otherwise remove it
+            $('#right_col').removeClass('fixed')
+          }
+        });
+      });
+EOS
+  end
+
   def jquery_block_tag(content)
     javascript_tag "jQuery(function(){#{content}})"
   end

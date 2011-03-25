@@ -7,6 +7,7 @@ Law::Application.routes.draw do
     end
   end
 
+  resources :jobs
   
   root :to => "truths#index"
 
