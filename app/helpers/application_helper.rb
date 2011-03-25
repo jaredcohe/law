@@ -3,9 +3,17 @@ module ApplicationHelper
   def fixed_floating_element
     js =<<EOS
       $(document).ready(function () {
-
         var top = $('#right_col').offset().top;
-        console.log(top)
+        var left = $('#right_col').offset().left;
+        var right = $('#right_col').offset().right;
+
+        $('#right_col').addAttr("left =" + left)
+
+        console.log(top);
+        console.log(left);
+        console.log(right);
+
+
 
         $(window).scroll(function () {
           // what is y position of scrolling

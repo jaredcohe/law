@@ -1,4 +1,4 @@
-= jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 3','Title must have at least 3 characters.') + validate_js('truth_body','VAL && VAL.length < 10','Truth must have at least 10 characters.') + validate_js('truth_title','!VAL','Truth must have a title.') + validate_js('truth_body','!VAL','Truth cannot be blank.') + fixed_floating_element)
+= jquery_block_tag(validate_js('truth_title','VAL && VAL.length < 3','Title must have at least 3 characters.') + validate_js('truth_body','VAL && VAL.length < 10','Truth must have at least 10 characters.') + validate_js('truth_title','!VAL','Truth must have a title.') + validate_js('truth_body','!VAL','Truth cannot be blank.'))
 
 .container
 
