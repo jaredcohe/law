@@ -3,7 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 gem "haml", ">= 3.0.0"
 gem "haml-rails", "0.3.4"
-gem 'mysql2'
+gem "sass"
+gem 'mysql2', "0.2.7" # v0.3 requires rails 3
 
 gem 'recaptcha', :require => 'recaptcha/rails'
 
