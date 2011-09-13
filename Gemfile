@@ -5,7 +5,7 @@ gem "haml", ">= 3.0.0"
 gem "haml-rails", "0.3.4"
 gem "sass"
 gem 'mysql2', "0.2.7" # v0.3 requires rails 3
-
+gem 'rake', '~> 0.8.7' # rake 0.9.0 is broken
 gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Bundle edge Rails instead:
