@@ -10,6 +10,12 @@ gem 'recaptcha', :require => 'recaptcha/rails'
 
 # gem 'jquery-rails'
 
+# to fix heroku error
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
